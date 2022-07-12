@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Neumorphism generator</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="./css/color.css">
+</head>
+<body>
+	<div class="run">
+		<center>
+			<div id="elem">
+				
+			</div>
+		</center>
+	</div>
+	<div class="param" id="param">
+		<div class="parameter">
+			<input type="text" id="color_code" class="color_code">Pick color
+			<input type="color" id="color" class="color"><br>
+			<div class="row">
+				<label>Size:</label>
+				<input type="range" id="size" class="size" step="1" min="40" max="350" value="180">
+				<span id="volet_size" class="volet"></span>
+			</div>
+			<div class="row">
+				<label>Distance:</label>
+				<input type="range" id="distance" class="size" step="1" min="1" max="60" value="8">
+				<span id="volet_distance" class="volet"></span>
+			</div>
+			<div class="row">
+				<label>Radius:</label>
+				<input type="range" id="radius" class="size" step="1" min="0" max="175" value="0">
+				<span id="volet_radius" class="volet"></span>
+			</div>
+			<div class="row">
+				<label>Blur:</label>
+				<input type="range" id="blur" class="size" step="1" min="1" max="170" value="16">
+				<span id="volet_blur" class="volet"></span>
+			</div>
+			<div class="row">
+				<label>Intensity:</label>
+				<input type="range" id="intensity" class="size" step="1" min="5" max="50" value="10">
+				<span id="volet_intensity" class="volet"></span>
+			</div>
+		</div>
+		
+		<div class="code-block">
+			<button id="copy" class="copy" onclick="copy()">Copy</button>
+			<pre style="">
+				<code id="code" style="">
+	<span class="token" style="color: rgb(43, 143, 254);">border-radius</span><span class="token" style="color: rgb(197, 200, 198);">:</span> <font id="border_radius" class="nber">50</font><font id="border_radius_unit" class="px">px</font><span class="token" style="color: rgb(197, 200, 198);">;</span><span class="token" style="color: rgb(43, 143, 254);">
+	background</span><span class="token" style="color: rgb(197, 200, 198);">:</span>	<font id="background" class="nber">#e0e0e0</font><span class="token" style="color: rgb(197, 200, 198);">;</span>
+	<span class="token" style="color: rgb(43, 143, 254);">box-shadow</span><span class="token" style="color: rgb(197, 200, 198);">:</span>	<font class="nber" id="distance_value">20</font><font class="px">px</font> <font class="nber" id="distance_value">20</font><font class="px">px</font> <font id="blur_id" class="nber">60</font><font class="px">px</font> <font id="bottom-shadow" class="nber">#bebebe</font><span class="token" style="color: rgb(197, 200, 198);">,</span>
+			<font class="nber">-</font><font class="nber" id="distance_value">20</font><font class="px">px</font> <font class="nber">-</font><font class="nber" id="distance_value">20</font><font class="px">px</font> <font id="blur_id" class="nber">60</font><font class="px">px</font> <font id="top-shadow" class="nber">#ffffff</font><span class="token" style="color: rgb(197, 200, 198);">;</span>
+				</code>
+				<div class="copied">
+					
+				</div>
+			</pre>
+			<label for="code-container" class="hidden" hidden="true">hidden</label>
+			<textarea id="code-container" readonly="" hidden="true">
+				border-radius: 50px; 
+				background: #e0e0e0;
+				box-shadow:  20px 20px 60px #bebebe,
+					    -20px -20px 60px #ffffff;
+			</textarea>
+		</div>
+                <!-- <div style='font-size: 20px; color: midnightblue;'>By Boubakari Dawaï</div> -->
+	</div>
+	<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
